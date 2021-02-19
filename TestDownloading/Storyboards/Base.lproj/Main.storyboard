@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rav-A1-wDr">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Downloads Table Controller-->
+        <scene sceneID="pyM-S7-E8c">
+            <objects>
+                <viewController id="rav-A1-wDr" customClass="DownloadsTableController" customModule="TestDownloading" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hpC-9a-XeN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZKa-9n-QBC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="rav-A1-wDr" id="UTv-gr-qq0"/>
+                                    <outlet property="delegate" destination="rav-A1-wDr" id="z7d-AB-Sp3"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lBY-eb-zFR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lBY-eb-zFR" firstAttribute="trailing" secondItem="ZKa-9n-QBC" secondAttribute="trailing" id="7Kt-2A-rDi"/>
+                            <constraint firstItem="ZKa-9n-QBC" firstAttribute="leading" secondItem="lBY-eb-zFR" secondAttribute="leading" id="Qsb-E0-YV7"/>
+                            <constraint firstItem="lBY-eb-zFR" firstAttribute="bottom" secondItem="ZKa-9n-QBC" secondAttribute="bottom" id="cGj-w4-vuX"/>
+                            <constraint firstItem="ZKa-9n-QBC" firstAttribute="top" secondItem="lBY-eb-zFR" secondAttribute="top" id="fPz-6Z-zpU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="downloadsTableView" destination="ZKa-9n-QBC" id="iYh-79-qvM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ME9-kc-ZCz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1290" y="113"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="dtH-ry-MBZ">
+            <objects>
+                <viewController storyboardIdentifier="ImageViewController" id="jl4-ql-RGT" customClass="ImageViewController" customModule="TestDownloading" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yqi-Fi-mHx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R3O-lz-zMm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zK3-so-Nym"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="R3O-lz-zMm" firstAttribute="top" secondItem="zK3-so-Nym" secondAttribute="top" id="UOI-65-kxN"/>
+                            <constraint firstItem="R3O-lz-zMm" firstAttribute="leading" secondItem="zK3-so-Nym" secondAttribute="leading" id="fsu-Vx-4Vb"/>
+                            <constraint firstItem="zK3-so-Nym" firstAttribute="trailing" secondItem="R3O-lz-zMm" secondAttribute="trailing" id="gHG-X4-OLF"/>
+                            <constraint firstItem="zK3-so-Nym" firstAttribute="bottom" secondItem="R3O-lz-zMm" secondAttribute="bottom" id="oby-P0-Ray"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fullImageView" destination="R3O-lz-zMm" id="IAK-jb-Iir"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xIX-Ib-FRd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2251" y="113"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
